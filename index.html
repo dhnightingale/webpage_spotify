@@ -98,6 +98,448 @@
 <p class="p5"><span class="s1">Our results for Spotify are the playlists that we recommend for each genre. Here is an example of the playlist that we generated for the genre “Indie:”</span></p>
 <p class="p10"><span class="s1"><br>
 
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>track_name</th>
+      <th>track_album_name</th>
+      <th>track_artists_name1</th>
+      <th>track_artists_name2</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>1112</th>
+      <td>end</td>
+      <td>end</td>
+      <td>Jeremy Zucker</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>11543</th>
+      <td>Bad Girls - Switch Remix</td>
+      <td>Bad Girls (The Remixes)</td>
+      <td>M.I.A.</td>
+      <td>Missy Elliott</td>
+    </tr>
+    <tr>
+      <th>11920</th>
+      <td>From Nowhere</td>
+      <td>Sweet Disarray</td>
+      <td>Dan Croll</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>11956</th>
+      <td>Blue Clouds</td>
+      <td>Monkeytown</td>
+      <td>Modeselektor</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>14483</th>
+      <td>Voyeur</td>
+      <td>Overgrown</td>
+      <td>James Blake</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>17793</th>
+      <td>We're Going To Be Friends</td>
+      <td>White Blood Cells</td>
+      <td>The White Stripes</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>23713</th>
+      <td>What Could You Do</td>
+      <td>What Could You Do</td>
+      <td>Dolorean</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>26841</th>
+      <td>Everything Now</td>
+      <td>Everything Now</td>
+      <td>Arcade Fire</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>28401</th>
+      <td>Offering</td>
+      <td>Offering</td>
+      <td>Cults</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>30064</th>
+      <td>Remind Me - Radio Edit</td>
+      <td>Melody AM</td>
+      <td>Röyksopp</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>31164</th>
+      <td>Circle</td>
+      <td>Triangle</td>
+      <td>Slow Magic</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>33177</th>
+      <td>Promise</td>
+      <td>Every Kingdom</td>
+      <td>Ben Howard</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>36596</th>
+      <td>Here Tonight</td>
+      <td>Where to Run</td>
+      <td>Sam Burchfield</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>39936</th>
+      <td>You Playin' (This Could Be Us) [feat. The Game...</td>
+      <td>You Playin' (This Could Be Us) [feat. The Game...</td>
+      <td>Jae Murphy</td>
+      <td>The Game</td>
+    </tr>
+    <tr>
+      <th>45721</th>
+      <td>In A Drawer</td>
+      <td>Why Are You OK</td>
+      <td>Band of Horses</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>48183</th>
+      <td>Not Going Home</td>
+      <td>Not Going Home</td>
+      <td>Great Good Fine Ok</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>49178</th>
+      <td>Power</td>
+      <td>Power</td>
+      <td>Ó</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>50025</th>
+      <td>Look Out</td>
+      <td>Look Out</td>
+      <td>Bad Wave</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>54388</th>
+      <td>Immeasurably More</td>
+      <td>The Art of Celebration</td>
+      <td>Rend Collective</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>58561</th>
+      <td>Do You Remember</td>
+      <td>Do You Remember</td>
+      <td>Jarryd James</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>59893</th>
+      <td>Cleaning House</td>
+      <td>Infinite Worlds</td>
+      <td>Vagabon</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>70676</th>
+      <td>Gubben i lådan</td>
+      <td>Gubben i lådan</td>
+      <td>Daniel Adams-Ray</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>75797</th>
+      <td>Baby Blue</td>
+      <td>American English</td>
+      <td>Tor Miller</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>76577</th>
+      <td>About Us</td>
+      <td>ODE</td>
+      <td>JOY.</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>77329</th>
+      <td>Rescue Song - RAC Remix</td>
+      <td>Rescue Song</td>
+      <td>Mr Little Jeans</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>78792</th>
+      <td>Everyone Is Gonna Love Me Now</td>
+      <td>Lights Out (Deluxe Edition)</td>
+      <td>Ingrid Michaelson</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>80267</th>
+      <td>Hello - Radio Edit</td>
+      <td>Hello</td>
+      <td>Martin Solveig</td>
+      <td>Dragonette</td>
+    </tr>
+    <tr>
+      <th>82437</th>
+      <td>My Boo</td>
+      <td>Confessions</td>
+      <td>Usher</td>
+      <td>Alicia Keys</td>
+    </tr>
+    <tr>
+      <th>92700</th>
+      <td>You Don't Know Me</td>
+      <td>You Don't Know Me</td>
+      <td>Jax Jones</td>
+      <td>RAYE</td>
+    </tr>
+    <tr>
+      <th>97774</th>
+      <td>Shinin</td>
+      <td>Shinin</td>
+      <td>Lindstrøm</td>
+      <td>Grace Hall</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>163725</th>
+      <td>Turn (Instrumental Version)</td>
+      <td>Awakened to the Sound (Instrumental Version)</td>
+      <td>Future Of Forestry</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>167174</th>
+      <td>Videotape</td>
+      <td>In Rainbows</td>
+      <td>Radiohead</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>171947</th>
+      <td>Body</td>
+      <td>Body</td>
+      <td>Dreezy</td>
+      <td>Jeremih</td>
+    </tr>
+    <tr>
+      <th>172448</th>
+      <td>Pieces (Live)</td>
+      <td>Have It All (Live)</td>
+      <td>Steffany Gretzinger</td>
+      <td>Bethel Music</td>
+    </tr>
+    <tr>
+      <th>174133</th>
+      <td>Eternity</td>
+      <td>Come Alive</td>
+      <td>Rachel Taylor</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>176468</th>
+      <td>Slow Motion</td>
+      <td>Trigga Reloaded</td>
+      <td>Trey Songz</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>185046</th>
+      <td>Myenemy</td>
+      <td>Myenemy</td>
+      <td>Parcels</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>185282</th>
+      <td>I Know</td>
+      <td>Dark Sky Paradise</td>
+      <td>Big Sean</td>
+      <td>Jhene Aiko</td>
+    </tr>
+    <tr>
+      <th>188076</th>
+      <td>Full Moon</td>
+      <td>With Light and with Love</td>
+      <td>Woods</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>192583</th>
+      <td>John's Star</td>
+      <td>The National</td>
+      <td>The National</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>198435</th>
+      <td>Down On Me</td>
+      <td>All About You (Deluxe Edition)</td>
+      <td>Jeremih</td>
+      <td>50 Cent</td>
+    </tr>
+    <tr>
+      <th>202977</th>
+      <td>Thunder</td>
+      <td>Thunder</td>
+      <td>Imagine Dragons</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>206615</th>
+      <td>Vibe</td>
+      <td>The Water[s]</td>
+      <td>Mick Jenkins</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>210461</th>
+      <td>Distraction</td>
+      <td>SweetSexySavage (Deluxe)</td>
+      <td>Kehlani</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>212001</th>
+      <td>Pieces (Hushed)</td>
+      <td>Black Bear (Hushed)</td>
+      <td>Andrew Belle</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>213868</th>
+      <td>No Longer Slaves (Radio Version) [feat. Jonath...</td>
+      <td>No Longer Slaves (Radio Version) [feat. Jonath...</td>
+      <td>Bethel Music</td>
+      <td>Jonathan David Helser</td>
+    </tr>
+    <tr>
+      <th>215115</th>
+      <td>Moments Passed</td>
+      <td>Moments Passed</td>
+      <td>Dermot Kennedy</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>219486</th>
+      <td>Bloom</td>
+      <td>In Return</td>
+      <td>ODESZA</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>224921</th>
+      <td>Recognize (feat. Drake)</td>
+      <td>PARTYNEXTDOOR TWO</td>
+      <td>PARTYNEXTDOOR</td>
+      <td>Drake</td>
+    </tr>
+    <tr>
+      <th>236641</th>
+      <td>Crossfire</td>
+      <td>Crossfire</td>
+      <td>Stephen</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>241237</th>
+      <td>Let Her Go</td>
+      <td>All The Little Lights</td>
+      <td>Passenger</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>244466</th>
+      <td>Doubt (Summer Edit)</td>
+      <td>Doubt (Summer Edit)</td>
+      <td>Shallou</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>260407</th>
+      <td>Chasing Cars</td>
+      <td>Eyes Open</td>
+      <td>Snow Patrol</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>263225</th>
+      <td>Either Way - Maleek Berry Remix</td>
+      <td>Either Way (Maleek Berry Remix)</td>
+      <td>Snakehips</td>
+      <td>Anne-Marie</td>
+    </tr>
+    <tr>
+      <th>266976</th>
+      <td>Feel It Still</td>
+      <td>Feel It Still</td>
+      <td>Portugal. The Man</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>269837</th>
+      <td>Stay With You</td>
+      <td>Stay With You</td>
+      <td>Cheat Codes</td>
+      <td>CADE</td>
+    </tr>
+    <tr>
+      <th>270434</th>
+      <td>Burn Break Crash</td>
+      <td>Burn Break Crash</td>
+      <td>Aanysa</td>
+      <td>Snakehips</td>
+    </tr>
+    <tr>
+      <th>283399</th>
+      <td>Pretty Girl Rock</td>
+      <td>No Boys Allowed (Deluxe)</td>
+      <td>Keri Hilson</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>284507</th>
+      <td>Best Day Of My Life</td>
+      <td>Oh, What A Life</td>
+      <td>American Authors</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>288080</th>
+      <td>Preach</td>
+      <td>If You're Reading This It's Too Late</td>
+      <td>Drake</td>
+      <td>PARTYNEXTDOOR</td>
+    </tr>
+  </tbody>
+</table>
+<p>75 rows × 4 columns</p>
+<p class="p10"><span class="s1"><br>
 
 <p class="p5"><span class="s1">We put this together by randomly selecting indie songs and putting them into playlists. We only kept the playlist with the highest probability of success. There are a couple of downsides with our current system. First, it uses artist genre and there are often many genres associated with each artist. This might not give a great representation of the desired genre. Second, this model still has a hard time classifying anything as success. After hundreds of iterations, the most likely success only had a 45% chance of success. While this is much better than most playlists will do (remember, only 20% of the original playlists are classified as success), this is still probably not as strong as we would like. We think that this model would likely become stronger with more predictors or a larger subset of playlists. For predicting followers, there are likely many complex features that include what becomes a success, including how they show up in Spotify’s search results (though causality could go in both directions). Future work would involve getting many more features and building a stronger model. However, we think our basic framework is a good way to attack the problem and believe that we could provide useful feedback to Spotify given the time to build out a stronger classifier. </span></p>
 </body>
