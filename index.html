@@ -89,6 +89,10 @@
 <p class="p5"><span class="s1">Our baseline models are two linear regressions, one featuring all predictors and the other using a Lasso feature reduction method. However, we quickly realized that our model had very little predictive power. Instead, we decided to continue by trying to classify playlists as either successful or not successful. This seemed like a good approach because we can now give decent predictions about whether or not a playlist will be good or not instead of giving estimates of followers with huge errors.</span></p>
 <p class="p10"><span class="s1"><br>
 <p class="p5"><span class="s1">We began by creating a threshold of success for a playlist in terms of the number of followers. We set this threshold so that it would place a playlist in the top 20% most popular on Spotify (of the playlists we got from the API). With this threshold we then implemented a random forest classifier that returned a probability of the playlist hitting this threshold of followers. In other words we are generating a probability that the playlist is successful, and we use that probability to select which playlist to suggest to Spotify and/or the user.</span></p>
+<p class="p10"><span class="s1"><br>
+<p class="p3"> <img src="models.png" alt="Models"></p>
+<p class="p10"><span class="s1"><br>
+
 
 <p class="p5"><span class="s1"><b>RESULTS, CONCLUSIONS, & FUTURE WORK</b></span></p>
 <p class="p5"><span class="s1">Our results for Spotify are the playlists that we recommend for each genre. Here is an example of the playlist that we generated for the genre “Indie:”</span></p>
