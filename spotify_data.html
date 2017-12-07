@@ -11784,7 +11784,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[4]:</div>
+<div class="prompt input_prompt">In&nbsp;[31]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Import libraries</span>
@@ -11801,6 +11801,7 @@ div#notebook {
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 <span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
 <span class="kn">import</span> <span class="nn">itertools</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
 </pre></div>
 
 </div>
@@ -11819,7 +11820,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[5]:</div>
+<div class="prompt input_prompt">In&nbsp;[9]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Local data folder to save data to and pull data from</span>
@@ -12764,7 +12765,7 @@ playlist 211255</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[140]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">### Create the dictionary for the artist info (DO NOT RERUN)</span>
@@ -12782,119 +12783,10 @@ playlist 211255</pre>
 <span class="n">artist_dict</span> <span class="o">=</span> <span class="p">[{</span><span class="n">col</span><span class="p">:</span> <span class="n">val</span> <span class="k">for</span> <span class="n">col</span><span class="p">,</span> <span class="n">val</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">column_headers3</span><span class="p">,</span> <span class="n">col_values</span><span class="p">)}</span> <span class="k">for</span> <span class="n">col_values</span> <span class="ow">in</span> <span class="n">stacked_values_iterator3</span><span class="p">]</span>
 
 <span class="c1"># Obtained the expected dictionary?</span>
-<span class="n">artist_dict</span><span class="p">[:</span><span class="mi">30</span><span class="p">]</span>
+<span class="n">artist_dict</span><span class="p">[:</span><span class="mi">10</span><span class="p">]</span>
 </pre></div>
 
 </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-<div class="prompt output_prompt">Out[140]:</div>
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>[{&#39;artist_genre&#39;: [],
-  &#39;artist_id&#39;: &#39;2FaTVFX0KAyHQd0olLG0RB&#39;,
-  &#39;artist_popularity&#39;: 1},
- {&#39;artist_genre&#39;: [&#39;deep chill&#39;],
-  &#39;artist_id&#39;: &#39;76ZrJ8XwJXmTKbR7KDL1KW&#39;,
-  &#39;artist_popularity&#39;: 27},
- {&#39;artist_genre&#39;: [],
-  &#39;artist_id&#39;: &#39;3w7GgQaRMTCjaIfKRI07gN&#39;,
-  &#39;artist_popularity&#39;: 7},
- {&#39;artist_genre&#39;: [&#39;deep taiwanese pop&#39;],
-  &#39;artist_id&#39;: &#39;2nYN3WH8bZSMhNRGYfBT3Y&#39;,
-  &#39;artist_popularity&#39;: 33},
- {&#39;artist_genre&#39;: [],
-  &#39;artist_id&#39;: &#39;44SQjq9FW4yPRpMxGIO0Em&#39;,
-  &#39;artist_popularity&#39;: 28},
- {&#39;artist_genre&#39;: [&#39;reggae rock&#39;],
-  &#39;artist_id&#39;: &#39;3SsGnRBJ1aOpeBwFdtreKY&#39;,
-  &#39;artist_popularity&#39;: 20},
- {&#39;artist_genre&#39;: [],
-  &#39;artist_id&#39;: &#39;5PUMForX6lRvNBylTmls9C&#39;,
-  &#39;artist_popularity&#39;: 34},
- {&#39;artist_genre&#39;: [],
-  &#39;artist_id&#39;: &#39;493oUzakOCK7kfYMAlEPNC&#39;,
-  &#39;artist_popularity&#39;: 1},
- {&#39;artist_genre&#39;: [],
-  &#39;artist_id&#39;: &#39;17f5kPkp5H8UHtz31e9MAp&#39;,
-  &#39;artist_popularity&#39;: 8},
- {&#39;artist_genre&#39;: [],
-  &#39;artist_id&#39;: &#39;1rroZStCRJTpXaKzGQC5nO&#39;,
-  &#39;artist_popularity&#39;: 10},
- {&#39;artist_genre&#39;: [],
-  &#39;artist_id&#39;: &#39;52D5VYrufO1xendKCNG71I&#39;,
-  &#39;artist_popularity&#39;: 3},
- {&#39;artist_genre&#39;: [&#39;indie rockism&#39;],
-  &#39;artist_id&#39;: &#39;12ZliyAyBKTfGNqBFKt3OX&#39;,
-  &#39;artist_popularity&#39;: 18},
- {&#39;artist_genre&#39;: [&#39;christian alternative rock&#39;, &#39;christian rock&#39;],
-  &#39;artist_id&#39;: &#39;0FCzAWZZiYkkRPTGgfjNlj&#39;,
-  &#39;artist_popularity&#39;: 33},
- {&#39;artist_genre&#39;: [],
-  &#39;artist_id&#39;: &#39;0lN6W8BMcPLdzvTNu9QR5N&#39;,
-  &#39;artist_popularity&#39;: 6},
- {&#39;artist_genre&#39;: [],
-  &#39;artist_id&#39;: &#39;6Xrk92QQz9YA84dUGcao7W&#39;,
-  &#39;artist_popularity&#39;: 11},
- {&#39;artist_genre&#39;: [],
-  &#39;artist_id&#39;: &#39;6e2ldsnbekpcbLX188hPOG&#39;,
-  &#39;artist_popularity&#39;: 12},
- {&#39;artist_genre&#39;: [],
-  &#39;artist_id&#39;: &#39;79ZraksnB48gGR9diz1Ivt&#39;,
-  &#39;artist_popularity&#39;: 24},
- {&#39;artist_genre&#39;: [],
-  &#39;artist_id&#39;: &#39;6WiFSQlCFGi0PXuXL65zWg&#39;,
-  &#39;artist_popularity&#39;: 12},
- {&#39;artist_genre&#39;: [],
-  &#39;artist_id&#39;: &#39;3G10MpLg8bfsfpid3WHEor&#39;,
-  &#39;artist_popularity&#39;: 36},
- {&#39;artist_genre&#39;: [&#39;musica nativista&#39;, &#39;rock gaucho&#39;],
-  &#39;artist_id&#39;: &#39;2ZJAUr36IZp6pSiegYWRJP&#39;,
-  &#39;artist_popularity&#39;: 26},
- {&#39;artist_genre&#39;: [&#39;deep adult standards&#39;, &#39;doo-wop&#39;],
-  &#39;artist_id&#39;: &#39;5MsnoFODDc5nxWrjm99Zew&#39;,
-  &#39;artist_popularity&#39;: 25},
- {&#39;artist_genre&#39;: [],
-  &#39;artist_id&#39;: &#39;6wv9uwfuLYPQBww8LMstKC&#39;,
-  &#39;artist_popularity&#39;: 21},
- {&#39;artist_genre&#39;: [],
-  &#39;artist_id&#39;: &#39;4fwmaVRjK5RG4cbG2oZUS5&#39;,
-  &#39;artist_popularity&#39;: 13},
- {&#39;artist_genre&#39;: [&#39;hard house&#39;],
-  &#39;artist_id&#39;: &#39;51H7THgbtXqM2rln2YalwR&#39;,
-  &#39;artist_popularity&#39;: 31},
- {&#39;artist_genre&#39;: [&#39;christian relaxative&#39;],
-  &#39;artist_id&#39;: &#39;2eHl5z1I0fPtpBGH66qa0i&#39;,
-  &#39;artist_popularity&#39;: 37},
- {&#39;artist_genre&#39;: [&#39;byzantine&#39;, &#39;liturgical&#39;],
-  &#39;artist_id&#39;: &#39;4xX1IffLDfvJ7AS4I6vzDD&#39;,
-  &#39;artist_popularity&#39;: 34},
- {&#39;artist_genre&#39;: [],
-  &#39;artist_id&#39;: &#39;0PA28tQBY65NmvLi0xvuX9&#39;,
-  &#39;artist_popularity&#39;: 52},
- {&#39;artist_genre&#39;: [&#39;deep underground hip hop&#39;,
-   &#39;underground pop rap&#39;,
-   &#39;underground rap&#39;],
-  &#39;artist_id&#39;: &#39;6aUKy2LG1OU6KhYOZADolN&#39;,
-  &#39;artist_popularity&#39;: 48},
- {&#39;artist_genre&#39;: [],
-  &#39;artist_id&#39;: &#39;0OpkUY9ameQZamSl97LIce&#39;,
-  &#39;artist_popularity&#39;: 0},
- {&#39;artist_genre&#39;: [&#39;garage punk blues&#39;, &#39;punk blues&#39;],
-  &#39;artist_id&#39;: &#39;5hQhrVUcXs07omyV3lWUAe&#39;,
-  &#39;artist_popularity&#39;: 21}]</pre>
-</div>
-
-</div>
-
 </div>
 </div>
 
@@ -12961,10 +12853,11 @@ playlist 211255</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[7]:</div>
+<div class="prompt input_prompt">In&nbsp;[28]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">artist_genres_unique</span><span class="p">:</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># print a few genres</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">artist_genres_unique</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">10</span><span class="p">]:</span>
     <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
 </pre></div>
 
@@ -12990,1527 +12883,6 @@ marching band
 noise rock
 deep free jazz
 experimental dubstep
-progressive deathcore
-swamp blues
-musiikkia lapsille
-punk blues
-balkan brass
-belly dance
-deep delta blues
-dark electro-industrial
-contemporary jazz
-deep filthstep
-hip hop quebecois
-magyar
-mashup
-slovak hip hop
-poetry
-swedish jazz
-german metal
-straight edge
-abstractro
-norwegian rock
-neo metal
-emo punk
-folklore argentino
-swedish pop punk
-deep contemporary country
-indie anthem-folk
-deep psytrance
-power noise
-reggaeton flow
-accordeon
-motivation
-solipsynthm
-math rock
-jazz bass
-deep latin jazz
-modern uplift
-romantic
-folk metal
-rumba
-hardcore
-substep
-deep chill
-drum and bass
-pop
-zolo
-country christmas
-reggae
-deep liquid bass
-jump up
-r&amp;b
-witch house
-j-rock
-musique concrete
-deep discofox
-neurofunk
-alternative pop
-shanty
-soul christmas
-pakistani pop
-mathcore
-library music
-symphonic rock
-footwork
-uk hip hop
-indie psych-pop
-tracestep
-street punk
-reading
-beats
-thrash metal
-french punk
-latin
-theme
-finnish hardcore
-deep soundtrack
-urban contemporary
-french movie tunes
-spanish indie rock
-outlaw country
-southern gospel
-fingerstyle
-children&#39;s christmas
-deep jazz piano
-string folk
-deep happy hardcore
-pagode
-bachata
-banda
-fourth world
-italian jazz
-romanian pop
-gospel reggae
-goa trance
-dark wave
-violin
-albuquerque indie
-azontobeats
-swedish hard rock
-classic french pop
-deep canadian indie
-indie r&amp;b
-funky breaks
-swing
-industrial metal
-denver indie
-post-screamo
-alternative rock
-bubblegum dance
-new wave pop
-deep east coast hip hop
-chill lounge
-drone psych
-gothic symphonic metal
-hard minimal techno
-classic dutch pop
-alternative americana
-chillwave
-dallas indie
-musica para ninos
-german oi
-italian metal
-p funk
-symphonic black metal
-dubstep product
-classic schlager
-pop christmas
-deep flow
-dance rock
-black death
-rap metalcore
-deep liquid
-sleep
-makina
-mambo
-samba-enredo
-progressive rock
-south african jazz
-filter house
-electronica
-metal
-noise
-bouncy house
-british dance band
-deep ambient
-deep melodic hard rock
-highlife
-piedmont blues
-classic italian pop
-indie dream pop
-jazz metal
-monastic
-rap rock
-new beat
-downtempo
-portuguese pop
-modern country rock
-disco
-british alternative rock
-compositional ambient
-rockabilly
-liquid funk
-bemani
-deep ccm
-fallen angel
-kwaito house
-turntablism
-j-dance
-post-metal
-ska
-lift kit
-big beat
-athens indie
-latin electronica
-west coast trap
-chinese indie rock
-avant-garde
-new americana
-jangle rock
-skiffle
-traditional reggae
-breakcore
-deep pop r&amp;b
-alternative emo
-beach music
-deep tropical house
-indie psych-rock
-symphonic metal
-hiplife
-world worship
-deep motown
-big room
-j-metal
-forro
-classic chinese pop
-trash rock
-barbershop
-german punk
-indie fuzzpop
-experimental
-christmas
-acid jazz
-electronic trap
-tibetan
-doomcore
-australian country
-christian uplift
-deep jazz fusion
-romanian rock
-doujin
-cool jazz
-uk drill
-uk dub
-hollywood
-deathgrind
-italian progressive rock
-laboratorio
-wind ensemble
-roots rock
-ostrock
-russian rock
-swedish punk
-memphis hip hop
-belgian indie
-vapor house
-classic colombian pop
-italian hip hop
-pagan black metal
-progressive bluegrass
-children&#39;s music
-czech folk
-folk
-french folk
-breaks
-german pop
-klapa
-deep breakcore
-australian indie
-musica nativista
-serialism
-progressive trance
-nordic house
-jungle
-geek rock
-deep trap
-modern blues
-world christmas
-canadian metal
-hard house
-nu gaze
-atmospheric black metal
-contemporary post-bop
-chanson quebecois
-classic russian pop
-breakbeat
-necrogrind
-vietnamese pop
-cajun
-scratch
-rock
-rock catala
-deep disco
-gothic alternative
-dubstep
-deep chiptune
-corsican folk
-french rock
-power-pop punk
-skinhead reggae
-grunge
-samba
-screamo punk
-metal guitar
-post-grunge
-deep melodic metalcore
-electro
-psych gaze
-jazz trio
-soul blues
-meditation
-pop reggaeton
-classic venezuelan pop
-ragtime
-deep chill-out
-dub techno
-chip hop
-classic swedish pop
-edm
-latin metal
-outer hip hop
-ethiopian pop
-neo-psychedelic
-re:techno
-deep southern trap
-future funk
-neo-progressive
-hawaiian
-classic psychedelic rock
-progressive psytrance
-neo soul
-thrash core
-cuban rumba
-melodic death metal
-brazilian ccm
-japanese traditional
-anti-folk
-tzadik
-progressive electro house
-minimal wave
-martial industrial
-country
-harp
-taiwanese pop
-filthstep
-happy hardcore
-indie garage rock
-stride
-gbvfi
-alternative country
-skweee
-australian dance
-laiko
-hard alternative
-slow game
-latin pop
-mandopop
-candy pop
-merseybeat
-drone metal
-african gospel
-vintage jazz
-power violence
-charred death
-comedy
-psychill
-rap metal
-electroclash
-alternative metal
-latin christian
-vancouver indie
-australian alternative rock
-brazilian gospel
-southern hip hop
-norwegian gospel
-new weird america
-boogie-woogie
-screamocore
-classic soundtrack
-traditional funk
-puerto rican rock
-funk metal
-demoscene
-celtic christmas
-smooth jazz
-neue deutsche harte
-anarcho-punk
-boogaloo
-cryptic black metal
-irish folk
-g funk
-eurodance
-college a cappella
-columbus ohio indie
-coupe decale
-reggae rock
-deep hardcore punk
-classical guitar
-african rock
-canadian hip hop
-ye ye
-deep deep house
-argentine rock
-greek indie
-italo dance
-jazz funk
-viral pop
-hands up
-neo classical metal
-corrosion
-epicore
-float house
-brazilian punk
-appalachian folk
-japanoise
-sinhala
-crust punk
-abstract
-indie emo
-channel pop
-southern rock
-indie emo rock
-boy band
-deep pop edm
-texas country
-k-indie
-gothic rock
-cowboy western
-exotica
-uplifting trance
-harmonica blues
-country blues
-mpb
-electropunk
-dark ambient
-german hip hop
-louisville indie
-ballroom
-finnish jazz
-bluegrass
-schranz
-classify
-hip pop
-discofox
-melodic power metal
-fussball
-melodic hardcore
-broadway
-post-disco
-norwegian metal
-roots reggae
-tico
-italian folk
-stomp and whittle
-ethereal gothic
-emo
-ugandan pop
-baroque ensemble
-triangle indie
-traditional country
-uk funky
-rock steady
-persian traditional
-indie pop rock
-anthem worship
-dutch rock
-song poem
-cabaret
-villancicos
-norteno
-retro metal
-vintage italian soundtrack
-italian arena pop
-la indie
-alternative roots rock
-traditional folk
-j-reggae
-early music
-lounge house
-minimal
-indonesian indie
-rap chileno
-neo-industrial rock
-sertanejo universitario
-sky room
-electro latino
-grime
-vintage tango
-vegan straight edge
-desi hip hop
-russiavision
-go-go
-latvian pop
-afrobeats
-alt-indie rock
-military band
-detroit hip hop
-bolero
-croatian pop
-classic peruvian pop
-indonesian pop
-grupera
-uk post-punk
-doo-wop
-twee indie pop
-mexican son
-jump blues
-techno
-deep comedy
-deep turkish pop
-enka
-tech house
-indiecoustica
-singer-songwriter
-instrumental post rock
-capoeira
-turkish jazz
-chamame
-mizrahi
-baroque
-venezuelan rock
-dixieland
-vallenato
-barnemusikk
-belgian rock
-contemporary composition
-norwegian pop
-quebecois
-deep funk
-soul flow
-power metal
-deep latin alternative
-christian dance
-lo star
-chamber pop
-anime cv
-texas blues
-noise punk
-louvor
-danseband
-traditional scottish folk
-ecuadoria
-nerdcore
-mande pop
-arabesk
-doom metal
-canzone napoletana
-acousmatic
-memphis soul
-black metal
-death core
-polynesian pop
-reggaeton
-lovers rock
-power electronics
-psychedelic doom
-spanish punk
-deep nz indie
-afrobeat
-perth indie
-video game music
-argentine indie
-aussietronica
-post-disco soul
-psychedelic rock
-crossover thrash
-russian alternative
-hardcore breaks
-drama
-comic
-bossa nova
-neoclassical
-usbm
-c86
-deep dub techno
-bounce
-deep darkpsy
-brass band
-indie christmas
-michigan indie
-alternative metalcore
-galego
-orquesta tropical
-dirty south rap
-ambient
-preverb
-russian hip hop
-neo-traditional country
-deep gothic post-punk
-spanish invasion
-glam metal
-new orleans jazz
-fluxwork
-neo-rockabilly
-bangla
-lowercase
-deep dance pop
-cantopop
-traditional british folk
-sertanejo
-northern soul
-deep northern soul
-timba
-electroacoustic improvisation
-italian indie pop
-vapor pop
-deep soft rock
-sega
-covertrance
-minimal dubstep
-semba
-deep regional mexican
-slc indie
-jig and reel
-drumfunk
-italian pop
-turkish hip hop
-hatecore
-j-core
-faroese pop
-bulgarian folk
-neo honky tonk
-byzantine
-thrash-groove metal
-musique pour enfants
-pop flamenco
-brass ensemble
-funeral doom
-deep classical piano
-classic funk rock
-j-poprock
-classic afrobeat
-crossover prog
-kurdish folk
-spanish pop rock
-alternative ccm
-italian pop rock
-deep freestyle
-delta blues
-breton folk
-country rock
-progressive alternative
-new age piano
-hungarian rock
-turkish folk
-motown
-horrorcore
-french pop
-classical flute
-madchester
-kraut rock
-polka
-country gospel
-sheffield indie
-power blues-rock
-detroit techno
-dangdut
-neo mellow
-swedish folk pop
-warm drone
-soul jazz
-post-doom metal
-jazz fusion
-deep talent show
-christian relaxative
-blackgaze
-folk rock
-antiviral pop
-spanish new wave
-garage rock
-drift
-swedish reggae
-vegas indie
-nepali
-protopunk
-christian alternative rock
-west african jazz
-mallet
-minimal melodic techno
-deep german jazz
-deep opera
-guidance
-world chill
-spanish folk
-tanzlmusi
-indie shoegaze
-cello
-malagasy folk
-melodic hard rock
-drone folk
-deep folk metal
-abstract hip hop
-pixie
-vocaloid
-environmental
-fado
-ethereal wave
-canterbury scene
-traditional blues
-bass trip
-wrestling
-regional mexican
-brutal deathcore
-neofolk
-stoner rock
-muziek voor kinderen
-nwothm
-hip hop
-classical christmas
-chamber choir
-deep german indie
-polish pop
-czech rock
-flamenco
-german indie
-hard glam
-catalan folk
-darkstep
-deep melodic euro house
-gabba
-nu-cumbia
-chill groove
-israeli rock
-slow core
-dark cabaret
-quiet storm
-classical performance
-deep downtempo fusion
-chicago blues
-schlager
-catstep
-vintage swedish pop
-spytrack
-relaxative
-electric blues
-japanese city pop
-miami bass
-deep nordic folk
-swamp pop
-free jazz
-classic finnish rock
-moombahton
-nwobhm
-rai
-slam death metal
-deep latin christian
-deep punk rock
-punjabi
-soundtrack
-basque rock
-technical death metal
-voidgaze
-brazilian indie
-pop punk
-psychobilly
-black sludge
-comedy rock
-deep southern soul
-shiver pop
-new orleans blues
-k-pop
-minimal dub
-norwegian punk
-remix
-albanian pop
-finnish dance pop
-deep disco house
-underground hip hop
-microhouse
-outsider
-jazz christmas
-ceilidh
-visual kei
-british brass band
-indie poptimism
-acid house
-russelater
-gamelan
-traditional ska
-german techno
-groove metal
-turkish classical
-traditional swing
-soft rock
-bmore
-indietronica
-japanese r&amp;b
-new age
-ambient fusion
-swedish jazz orkester
-deep big room
-garage pop
-thai idol
-indian rock
-liedermacher
-ectofolk
-uk garage
-british blues
-gospel blues
-country dawn
-desert blues
-tekno
-industrial
-classic garage rock
-redneck
-melodipop
-celtic punk
-aggrotech
-deep taiwanese pop
-polish indie
-chicano rap
-kiwi rock
-vapor twitch
-austindie
-chalga
-icelandic pop
-deep australian indie
-latin alternative
-piano rock
-islamic recitation
-anime score
-australian pop
-gypsy jazz
-shibuya-kei
-french indie pop
-indie rock
-zouk
-garage psych
-brazilian composition
-bassline
-fast melodic punk
-merengue urbano
-cinematic dubstep
-gospel
-k-hop
-glitch hop
-deep hardcore
-levenslied
-soca
-danish jazz
-dark black metal
-deep adult standards
-strut
-math pop
-ghoststep
-dancehall
-neue deutsche welle
-vintage swing
-dutch pop
-armenian folk
-brutal death metal
-norwegian jazz
-goregrind
-spanish pop
-classical
-deep swedish rock
-future garage
-nu electro
-porro
-french hip hop
-finnish hip hop
-hard bop
-broken beat
-norwegian hip hop
-tribal house
-vintage rockabilly
-ghazal
-desi
-arab folk
-turkish alternative
-deep norteno
-nashville sound
-tin pan alley
-indie pop
-spanish rock
-kwaito
-maghreb
-classic turkish pop
-deep jazz guitar
-polish reggae
-nordic folk
-ambient psychill
-power pop
-zouglou
-brega
-stoner metal
-no wave
-irish rock
-j-indie
-nueva cancion
-experimental psych
-vocal jazz
-anime
-melodic progressive metal
-canadian country
-otacore
-heavy alternative
-hardcore hip hop
-liturgical
-tropical house
-terrorcore
-crunk
-ghettotech
-deep cumbia sonidera
-disco house
-avant-garde jazz
-bass trap
-twin cities indie
-workout
-cumbia
-spanish hip hop
-drone
-indie folk
-bass music
-vintage western
-string band
-welsh rock
-deep brazilian pop
-acoustic pop
-deep acoustic pop
-latin arena pop
-post rock
-slovenian rock
-progressive trance house
-carnatic
-danish pop
-riddim
-deep tech house
-neo soul-jazz
-bebop
-andean
-deep german hip hop
-vienna indie
-rhythm and boogie
-latin christmas
-swedish indie rock
-old school hip hop
-geek folk
-memphis blues
-romantico
-tango
-african percussion
-skinhead oi
-hardstyle
-oratory
-modern performance
-regional mexican pop
-classic norwegian pop
-mbalax
-kuduro
-deep euro house
-riot grrrl
-cumbia villera
-electro trash
-c-pop
-pop rap
-j-ambient
-gothic americana
-barnmusik
-smooth urban r&amp;b
-ambeat
-modern downshift
-house
-finnish metal
-screamo
-karneval
-intelligent dance music
-dwn trap
-neurostep
-deep psychobilly
-new wave
-black thrash
-kompa
-j-rap
-portland indie
-zim
-ninja
-ska revival
-dance-punk
-viking metal
-danish indie
-afrikaans
-deep surf music
-freak folk
-thai pop
-deep groove house
-manele
-carnaval
-soul
-girl group
-trap latino
-freestyle
-lithumania
-nl folk
-ukrainian rock
-chinese opera
-hauntology
-underground power pop
-singaporean pop
-classic danish pop
-swedish hip hop
-danish hip hop
-psychedelic trance
-japanese psychedelic
-mantra
-halloween
-post-hardcore
-trance
-turkish rock
-lds
-italian disco
-malaysian pop
-indie singer-songwriter
-string quartet
-grunge pop
-sunset lounge
-finnish indie
-dark jazz
-funk carioca
-minimal techno
-country road
-swiss rock
-deep pop emo
-calypso
-twee pop
-deep rai
-deep melodic death metal
-kids dance party
-trova
-acoustic blues
-deep german punk
-deep vocal house
-spanish indie pop
-garage punk blues
-ambient dub techno
-crack rock steady
-traditional rock &#39;n roll
-dark progressive house
-underground pop rap
-hoerspiel
-native american
-show tunes
-permanent wave
-contemporary classical
-raw black metal
-spoken word
-deep vocal jazz
-shimmer pop
-deep soul house
-finnish pop
-cumbia sonidera
-choral
-swedish indie pop
-ambient idm
-heavy gothic rock
-deep latin hip hop
-hebrew pop
-zeuhl
-didgeridoo
-new jack swing
-light music
-old-time
-harpsichord
-deep funk carioca
-metropopolis
-german ccm
-contemporary folk
-psychedelic blues-rock
-french reggae
-death metal
-dirty texas rap
-norwegian indie
-kayokyoku
-trip hop
-classic rock
-oi
-tropical
-argentine reggae
-louisiana blues
-a cappella
-nu disco
-hyphy
-classic russian rock
-indie punk
-football
-deep indie pop
-bubblegum pop
-hard stoner rock
-rap
-wonky
-dark minimal techno
-deep cello
-chicago house
-filmi
-blues-rock
-stomp pop
-slavic metal
-choro
-canadian pop
-commons
-funk rock
-rock gaucho
-atmospheric post-metal
-irish indie
-post-punk
-concert piano
-makossa
-orquesta tipica
-stomp and holler
-francoton
-pop house
-christelijk
-alternative r&amp;b
-british folk
-rva indie
-opm
-russian pop
-groove room
-vintage schlager
-benga
-brazilian hip hop
-deep indian pop
-classic polish pop
-punta
-irish country
-deep sunset lounge
-horror punk
-classical organ
-hindustani classical
-kabarett
-healing
-chanson
-electro house
-ok indie
-deep italo disco
-french folk pop
-college marching band
-german show tunes
-jam band
-euroska
-blaskapelle
-deep eurodance
-chill-out trance
-vintage reggae
-idol
-southern soul
-southern soul blues
-deep swedish indie pop
-deep indie singer-songwriter
-classical piano
-deep swedish hip hop
-glam rock
-easy listening
-throat singing
-deep new wave
-shimmer psych
-merengue
-consort
-deep smooth jazz
-dutch house
-yugoslav rock
-spanish classical
-orchestral
-nz indie
-caucasian folk
-cyber metal
-russian punk
-panpipe
-greek hip hop
-gothic metal
-acid techno
-j-pop
-deep progressive house
-indorock
-deep ragga
-full on
-j-punk
-west coast rap
-mexican traditional
-deep uplifting trance
-deep thrash metal
-speed metal
-dubsteppe
-deep power-pop punk
-trap music
-grave wave
-swiss hip hop
-gamecore
-musica per bambini
-deep german pop rock
-jazz composition
-indian pop
-neo-synthpop
-hard rock
-surf music
-early music ensemble
-christian christmas
-chinese traditional
-iskelma
-new jack smooth
-swedish pop
-atmospheric post rock
-vintage swoon
-progressive metal
-jazz blues
-dansktop
-deep christian rock
-electro swing
-classic finnish pop
-punk christmas
-gothic post-punk
-nu metal
-adult standards
-neo-trad metal
-austropop
-cumbia pop
-vintage country folk
-folk christmas
-nintendocore
-noise pop
-popgaze
-space rock
-zydeco
-bay area indie
-bay area hip hop
-e6fi
-deep new americana
-dominican pop
-coverchill
-nu jazz
-album rock
-jumpstyle
-deep indie rock
-velha guarda
-swedish alternative rock
-christian rock
-post-teen pop
-orgcore
-ragga jungle
-glitter trance
-swedish synthpop
-salsa international
-deep full on
-deep indie r&amp;b
-jazz brass
-kindermusik
-dark psytrance
-traditional soul
-minimal tech house
-balearic
-stomp and flutter
-danish pop rock
-pop rock
-salsa
-underground rap
-c64
-deep pop punk
-deep underground hip hop
-folk punk
-spanish reggae
-new romantic
-futurepop
-classical period
-classic belgian pop
-alternative hip hop
-danspunk
-downtempo fusion
-deep minimal techno
-movie tunes
-polish punk
-peruvian rock
-medieval
-rock-and-roll
-praise
-organic ambient
-funk
-lounge
-skate punk
-ebm
-folk-pop
-fake
-klezmer
-chamber psych
-industrial rock
-deep texas country
-electrofox
-dansband
-steelpan
-british indie rock
-operatic pop
-metalcore
-medieval rock
-dark hardcore
-hip house
-stl indie
-piano blues
-turbo folk
-experimental rock
-electro jazz
-blues
-shoegaze
-zillertal
-gangster rap
-vintage chanson
-western swing
-electro dub
-melancholia
-bhangra
-bubble trance
-melbourne bounce
-opera
-flick hop
-folkmusik
-trap francais
-rosary
-modern southern rock
-abstract idm
-morna
-pipe band
-indie rockism
-digital hardcore
-french indietronica
-hardcore techno
-brill building pop
-deep house
-saxophone
-modern free jazz
-italian punk
-christian punk
-christian hardcore
-sludge metal
-dance pop
-brostep
-hip hop tuga
-steampunk
-tribute
-swedish idol pop
-hungarian pop
-garage punk
-korean pop
-freakbeat
-sertanejo tradicional
-kc indie
-mod revival
-synthpop
-dutch hip hop
-chiptune
-estonian pop
-vintage gospel
-europop
-mandible
-cantautor
-japanese jazztronica
-eurovision
-northern irish indie
-progressive post-hardcore
-melodic metalcore
-technical brutal death metal
-drill and bass
-duranguense
-polish hip hop
-german pop rock
-indian classical
-lo-fi
-classic czech pop
-deep space rock
-punk ska
-ukulele
-christmas product
-depressive black metal
-dream pop
-polyphony
-jazz orchestra
-alternative pop rock
-electronic
-big band
-beatdown
-art rock
-free improvisation
-punk
-deep danish pop
-speedcore
-chillstep
-clarinet
-mexican indie
-kizomba
-oshare kei
-deep classic garage rock
-swedish prog
-britpop
-british invasion
-chaotic hardcore
-grindcore
-ska punk
-speed garage
-tejano
-funky tech house
-australian hip hop
-chillhop
-new tribe
-contemporary country
-chilean rock
-slovak pop
-teen pop
-italo beats
-jangle pop
-avantgarde metal
-russian folk
-blues-rock guitar
-latin hip hop
-grisly death metal
-luk thung
-soukous
-gauze pop
-sleaze rock
-classic icelandic pop
-ccm
-world fusion
-dreamo
-underground latin hip hop
-k-rock
-yoik
-deep neo-synthpop
-rebetiko
-east coast hip hop
-alternative dance
-scottish rock
-deep funk house
-accordion
-modern rock
-jug band
-modern classical
-drill
-turkish pop
-anthem emo
-swedish eurodance
-polish jazz
-nu age
-cubaton
-belorush
-greek house
-future ambient
-entehno
-renaissance
-deep string quartet
-leeds indie
-ranchera
-lilith
-complextro
-volksmusik
-outsider house
-vapor soul
-slash punk
-soda pop
-swedish metal
-portuguese rock
-glitch
-deep orgcore
-chicago soul
-german street punk
-electro-industrial
-qawwali
-bossa nova jazz
-chicago indie
-rio de la plata
-baile funk
-worship
-deep dutch hip hop
-chinese experimental
-thai indie
-world meditation
-gothic doom
-zouk riddim
-pinoy alternative
-traditional rockabilly
-suomi rock
-classic eurovision
-austrian hip hop
-focus
-celtic rock
-talent show
-zapstep
-djent
-electro bailando
-brooklyn indie
-cumbia funk
-christian metal
-jazz
-deep hardstyle
-axe
-world
-new rave
-fidget house
-pub rock
-composition d
-indie jazz
-deep progressive trance
-neo-pagan
-kirtan
-persian pop
-unblack metal
-czech hip hop
-vintage french electronic
-canadian indie
-nu skool breaks
-guitar case
-vaporwave
-latin jazz
-spanish noise pop
-colombian rock
-seattle indie
-rock en espanol
-j-poppunk
-mariachi
-retro electro
-central asian folk
-tone
-christian music
-disco polo
-grim death metal
-heavy christmas
-pop emo
-indian folk
-escape room
-nasheed
-arab pop
-electropowerpop
-j-idol
-deep neofolk
-bulgarian rock
-abstract beats
-azonto
-etherpop
-scorecore
-hungarian hip hop
-christian hip hop
-hardcore punk
-judaica
-glitch beats
-vocal house
-progressive uplifting trance
-deep orchestral
-progressive house
-celtic
-nursery
-mellow gold
-chaotic black metal
-destroy techno
-boston rock
-deep g funk
-bow pop
-neo-singer-songwriter
-wrock
 </pre>
 </div>
 </div>
@@ -14530,7 +12902,7 @@ wrock
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[224]:</div>
+<div class="prompt input_prompt">In&nbsp;[10]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># RERUN (Load playlist dictionary from pickle file)</span>
@@ -14547,7 +12919,7 @@ wrock
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[225]:</div>
+<div class="prompt input_prompt">In&nbsp;[11]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># RERUN (Load audio info dictionary from pickle file)</span>
@@ -14564,12 +12936,12 @@ wrock
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[226]:</div>
+<div class="prompt input_prompt">In&nbsp;[12]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># RERUN (Load artist info dictionary from pickle file)</span>
 
-<span class="c1"># Audio features</span>
+<span class="c1"># Artist features</span>
 <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">data_folder</span> <span class="o">+</span> <span class="s1">&#39;artist_dict.pickle&#39;</span><span class="p">,</span> <span class="s1">&#39;rb&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">handle2</span><span class="p">:</span>
     <span class="n">artist_dictionary</span> <span class="o">=</span> <span class="n">pickle</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">handle2</span><span class="p">)</span>
 </pre></div>
@@ -14581,7 +12953,7 @@ wrock
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[227]:</div>
+<div class="prompt input_prompt">In&nbsp;[13]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Create pandas playlist and track dataframe</span>
@@ -14595,7 +12967,7 @@ wrock
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[228]:</div>
+<div class="prompt input_prompt">In&nbsp;[14]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">data_tracks</span><span class="p">[</span><span class="mi">300</span><span class="p">:]</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
@@ -14610,7 +12982,7 @@ wrock
 
 
 <div class="output_area">
-<div class="prompt output_prompt">Out[228]:</div>
+<div class="prompt output_prompt">Out[14]:</div>
 
 
 <div class="output_html rendered_html output_subarea output_execute_result">
@@ -14742,7 +13114,7 @@ wrock
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[229]:</div>
+<div class="prompt input_prompt">In&nbsp;[15]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Create track and audio info dataframe</span>
@@ -14757,7 +13129,7 @@ wrock
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[230]:</div>
+<div class="prompt input_prompt">In&nbsp;[16]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">data_audio</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
@@ -14772,7 +13144,7 @@ wrock
 
 
 <div class="output_area">
-<div class="prompt output_prompt">Out[230]:</div>
+<div class="prompt output_prompt">Out[16]:</div>
 
 
 <div class="output_html rendered_html output_subarea output_execute_result">
@@ -14903,7 +13275,7 @@ wrock
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[231]:</div>
+<div class="prompt input_prompt">In&nbsp;[17]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Create artist info dataframe</span>
@@ -14918,7 +13290,7 @@ wrock
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[232]:</div>
+<div class="prompt input_prompt">In&nbsp;[18]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">data_artist</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
@@ -14933,7 +13305,7 @@ wrock
 
 
 <div class="output_area">
-<div class="prompt output_prompt">Out[232]:</div>
+<div class="prompt output_prompt">Out[18]:</div>
 
 
 <div class="output_html rendered_html output_subarea output_execute_result">
@@ -15004,7 +13376,7 @@ wrock
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[233]:</div>
+<div class="prompt input_prompt">In&nbsp;[19]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># merge the dataframes by track ID and artist ID (and sort by followers)</span>
@@ -15034,7 +13406,7 @@ wrock
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[234]:</div>
+<div class="prompt input_prompt">In&nbsp;[20]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># replace NA and blank values with pandas Nan values</span>
@@ -15050,7 +13422,7 @@ wrock
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[235]:</div>
+<div class="prompt input_prompt">In&nbsp;[21]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">spotify_data</span><span class="o">.</span><span class="n">shape</span>
@@ -15065,7 +13437,7 @@ wrock
 
 
 <div class="output_area">
-<div class="prompt output_prompt">Out[235]:</div>
+<div class="prompt output_prompt">Out[21]:</div>
 
 
 
@@ -15081,7 +13453,7 @@ wrock
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[236]:</div>
+<div class="prompt input_prompt">In&nbsp;[22]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># put the genres for all of the artists in one column</span>
@@ -15102,7 +13474,7 @@ wrock
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[237]:</div>
+<div class="prompt input_prompt">In&nbsp;[23]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># calculate the average artist popularity</span>
@@ -15117,7 +13489,7 @@ wrock
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[238]:</div>
+<div class="prompt input_prompt">In&nbsp;[24]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># delete merged on artist IDs</span>
@@ -15133,7 +13505,7 @@ wrock
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[239]:</div>
+<div class="prompt input_prompt">In&nbsp;[25]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># delete other individual artist characteristics</span>
@@ -15149,7 +13521,7 @@ wrock
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[240]:</div>
+<div class="prompt input_prompt">In&nbsp;[26]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">spotify_data</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
@@ -15164,7 +13536,7 @@ wrock
 
 
 <div class="output_area">
-<div class="prompt output_prompt">Out[240]:</div>
+<div class="prompt output_prompt">Out[26]:</div>
 
 
 <div class="output_html rendered_html output_subarea output_execute_result">
