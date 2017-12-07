@@ -25,9 +25,6 @@
     span.s6 {font-kerning: none; background-color: #ffffff}
     span.s7 {font-kerning: none; color: #a52a2a; background-color: #ffffff; -webkit-text-stroke: 0px #a52a2a}
     span.s8 {font-kerning: none; color: #ff0000; background-color: #ffffff; -webkit-text-stroke: 0px #ff0000}
-    body {
-    background-color: #e6ffe6;
-    color: #006400;
     
     .dataframe thead tr:only-child th {
         text-align: right;
@@ -40,8 +37,13 @@
     .dataframe tbody tr th {
         vertical-align: top;
     }
-  
-  a:link{
+    
+    
+    body {
+    background-color: #e6ffe6;
+    color: #006400;
+    
+      a:link{
         color: #000000;
         background-color: transparent;
         text-decoration: underline;
@@ -81,8 +83,9 @@
 <p class="p5"><span class="s1">Our initial data was obtained by requesting playlist information through the Spotify API, which provided information about artist and song popularities, as well as additional track characteristics, including tempo, key, and loudness. We investigated other potential predictors from the Million Songs Database developed by LabROSA at Columbia University, using the song title and album (this dataset unfortunately was missing ISRC). We did not take many features from this MSD dataset. This is partially because we did not think that too many of them would be useful (and due to time limitations). This is more or less what the data looked like:</span></p>
 <p class="p10"><span class="s1"><br></span></p>
 
-<table border="1" class="dataframe">\n  <thead>\n    <tr style="text-align: center;">\n      <th></th>\n      <th>followers</th>\n      <th>pl_length</th>\n      <th>pl_name</th>\n      <th>track_album_name</th>\n      <th>track_name</th>\n      <th>track_populatrity</th>\n      <th>track_acousticness</th>\n      <th>track_danceability</th>\n      <th>track_energy</th>\n      <th>track_key</th>\n    </tr>\n  </thead>\n  <tbody>\n    <tr>\n      <th>1559039</th>\n      <td>4594125</td>\n      <td>60</td>\n      <td>mint</td>\n      <td>Off The Deep End Volume One</td>\n      <td>Ghost</td>\n      <td>60</td>\n      <td>0.101000</td>\n      <td>0.530</td>\n      <td>0.634</td>\n      <td>5.0</td>\n    </tr>\n    <tr>\n      <th>893872</th>\n      <td>4594125</td>\n      <td>60</td>\n      <td>mint</td>\n      <td>Without You (Remixes)</td>\n      <td>Without You - Otto Knows Remix</td>\n      <td>51</td>\n      <td>0.000738</td>\n      <td>0.531</td>\n      <td>0.850</td>\n      <td>2.0</td>\n    </tr>\n    <tr>\n      <th>334899</th>\n      <td>4594125</td>\n      <td>60</td>\n      <td>mint</td>\n      <td>Message In A Bottle</td>\n      <td>Message In A Bottle</td>\n      <td>52</td>\n      <td>0.015700</td>\n      <td>0.543</td>\n      <td>0.939</td>\n      <td>1.0</td>\n    </tr>\n    <tr>\n      <th>65251</th>\n      <td>4594125</td>\n      <td>60</td>\n      <td>mint</td>\n      <td>Almost Home</td>\n      <td>Almost Home</td>\n      <td>63</td>\n      <td>0.037600</td>\n      <td>0.780</td>\n      <td>0.722</td>\n      <td>0.0</td>\n    </tr>\n    <tr>\n      <th>1198752</th>\n      <td>4594125</td>\n      <td>60</td>\n      <td>mint</td>\n      <td>Nobody Compares To You</td>\n      <td>Nobody Compares To You</td>\n      <td>71</td>\n      <td>0.229000</td>\n      <td>0.596</td>\n      <td>0.731</td>\n      <td>2.0</td>\n    </tr>\n  </tbody>\n</table>
-
+<p class="p3">
+<table border="1" class="dataframe">  <thead>    <tr style="text-align: center;">      <th></th>      <th>followers</th>      <th>pl_length</th>      <th>pl_name</th>      <th>track_album_name</th>      <th>track_name</th>      <th>track_populatrity</th>      <th>track_acousticness</th>      <th>track_danceability</th>      <th>track_energy</th>      <th>track_key</th>    </tr>  </thead>  <tbody>    <tr>      <th>1559039</th>      <td>4594125</td>      <td>60</td>      <td>mint</td>      <td>Off The Deep End Volume One</td>      <td>Ghost</td>      <td>60</td>      <td>0.101000</td>      <td>0.530</td>      <td>0.634</td>      <td>5.0</td>    </tr>    <tr>      <th>893872</th>      <td>4594125</td>      <td>60</td>      <td>mint</td>      <td>Without You (Remixes)</td>      <td>Without You - Otto Knows Remix</td>      <td>51</td>      <td>0.000738</td>      <td>0.531</td>      <td>0.850</td>      <td>2.0</td>    </tr>    <tr>      <th>334899</th>      <td>4594125</td>      <td>60</td>      <td>mint</td>      <td>Message In A Bottle</td>      <td>Message In A Bottle</td>      <td>52</td>      <td>0.015700</td>      <td>0.543</td>      <td>0.939</td>      <td>1.0</td>    </tr>    <tr>      <th>65251</th>      <td>4594125</td>      <td>60</td>      <td>mint</td>      <td>Almost Home</td>      <td>Almost Home</td>      <td>63</td>      <td>0.037600</td>      <td>0.780</td>      <td>0.722</td>      <td>0.0</td>    </tr>    <tr>      <th>1198752</th>      <td>4594125</td>      <td>60</td>      <td>mint</td>      <td>Nobody Compares To You</td>      <td>Nobody Compares To You</td>      <td>71</td>      <td>0.229000</td>      <td>0.596</td>      <td>0.731</td>      <td>2.0</td>    </tr>  </tbody></table>
+</p>
 
 <p class="p5"><span class="s1">Part of Spotify’s edge in the competitive streaming-audio industry (as it quickly expands into other verticals such as video-streams and recording) is the ease-of-use of its platform: music is curated and presented to minimize effort needed to find tracks you like. The <i>Discover Weekly</i> playlist, for example, is an translation of a user’s hebdomadal listening history into a new set of tracks delivered to him or her each Monday. Developing a product that responds accurately to a user’s request is paramount to continued growth and success of the platform. It also helps innovators in the music industry understand how users react to a specific implementation of a curative algorithm;<span class="Apple-converted-space"> </span></span></p>
 <p class="p10"><span class="s1"><br>
