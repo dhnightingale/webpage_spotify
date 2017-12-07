@@ -48,6 +48,7 @@
     border-collapse: collapse;
     padding: 15px;
     text-align: center;
+    color: #000000
     }
     
     
@@ -126,7 +127,7 @@
 <p class="p5"><span class="s1">Our results for Spotify are the playlists that we recommend for each genre. Here is an example of the playlist that we generated for the genre “Indie:”</span></p>
 <p class="p10"><span class="s1"><br>
 
-<table border="1" align="right" class="dataframe">
+<table border="1" align="center" class="dataframe">
   <thead>
     <tr style="text-align: right;">
       <th></th>
@@ -566,7 +567,6 @@
     </tr>
   </tbody>
 </table>
-<p>75 rows × 4 columns</p>
 <p class="p10"><span class="s1"><br>
 
 <p class="p5"><span class="s1">We put this together by randomly selecting indie songs and putting them into playlists. We only kept the playlist with the highest probability of success. There are a couple of downsides with our current system. First, it uses artist genre and there are often many genres associated with each artist. This might not give a great representation of the desired genre. Second, this model still has a hard time classifying anything as success. After hundreds of iterations, the most likely success only had a 45% chance of success. While this is much better than most playlists will do (remember, only 20% of the original playlists are classified as success), this is still probably not as strong as we would like. We think that this model would likely become stronger with more predictors or a larger subset of playlists. For predicting followers, there are likely many complex features that include what becomes a success, including how they show up in Spotify’s search results (though causality could go in both directions). Future work would involve getting many more features and building a stronger model. However, we think our basic framework is a good way to attack the problem and believe that we could provide useful feedback to Spotify given the time to build out a stronger classifier. </span></p>
