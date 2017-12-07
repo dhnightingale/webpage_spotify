@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Spotify Playlist Analysis</title>
+</head>
+
+<body>
+DATA
+DSF 
+DF LKJ
+</body>
+
+</html>
