@@ -63,17 +63,29 @@
 <p class="p5"><span class="s1"><b>MOTIVATION</b></span></p>
 <p class="p5"><span class="s1">Our goal was to come up with a model for generating playlists that will maximize the likelihood of obtaining a significant number of followers for the most common user-specified genres or search filters.</span></p>
 <p class="p8"><span class="s1"></span><br></p>
-<p class="p8"><span class="s1"></span><br></p>
 <p class="p5"><span class="s1"><b>Our final deliverable to Spotify is a set of playlists that are most likely to be highly successful. These playlists are based around artist genre (as we did not have data on song genre).<span class="Apple-converted-space"> </span></b></span></p>
 <p class="p9"><span class="s1"></span><br></p>
 <p class="p5"><span class="s1"><b>DATA<span class="Apple-converted-space"> </span></b></span></p>
-<p class="p5"><span class="s1">Our initial data was obtained by requesting playlist information through the Spotify API, which provided information about artist and song popularities, as well as additional track characteristics, including tempo, key, and loudness. We investigated other potential predictors from the Million Songs Database developed by LabROSA at Columbia University, using the song title and length.</span></p>
-<p class="p10"><span class="s1"><br>
-</span></p>
+<p class="p5"><span class="s1">Our initial data was obtained by requesting playlist information through the Spotify API, which provided information about artist and song popularities, as well as additional track characteristics, including tempo, key, and loudness. We investigated other potential predictors from the Million Songs Database developed by LabROSA at Columbia University, using the song title and album. This is more or less what the data looked like:</span></p>
+<p class="p10"><span class="s1"><br></span></p>
+
+
+
+
+
 <p class="p5"><span class="s1">Part of Spotify’s edge in the competitive streaming-audio industry (as it quickly expands into other verticals such as video-streams and recording) is the ease-of-use of its platform: music is curated and presented to minimize effort needed to find tracks you like. The <i>Discover Weekly</i> playlist, for example, is an translation of a user’s hebdomadal listening history into a new set of tracks delivered to him or her each Monday. Developing a product that responds accurately to a user’s request is paramount to continued growth and success of the platform. It also helps innovators in the music industry understand how users react to a specific implementation of a curative algorithm;<span class="Apple-converted-space"> </span></span></p>
 <p class="p10"><span class="s1"><br>
 </span></p>
 <p class="p5"><span class="s1">There are two main obstacles to solving this problem, the latter much more abstract than the former. First, we needed to determine which predictors of the Spotify-generated data were most important in determining how many followers a playlist would accumulate. Our analysis of this took a potentially dangerous amount of our time and effort, as it resulted in a number of time-intensive attempts. Second, we needed to find a way to understand user-specified input to build a playlist that matched the request: parsing out genres attributed to each track, understanding which song characteristics perform better by genre, and ensuring overall playlist coherence/consistency.</span></p>
+<p class="p10"><span class="s1"><br>
+<p class="p5"><span class="s1">Here are some examples of our EDA:</span></p>
+<p class="p10"><span class="s1"><br>
+<p class="p3"> <img src="eda3.png" alt="EDA 3" style="width:170px;height:170px;"></p>
+<p class="p3"> <img src="eda4.png" alt="EDA 4" style="width:170px;height:170px;"></p>
+<p class="p3"> <img src="eda2.png" alt="EDA 2"></p>
+<p class="p3"> <img src="eda1.png" alt="EDA 1"></p>
+
+<p class="p10"><span class="s1"><br>
 <h1 style="margin: 0.0px 0.0px 0.0px 0.0px; line-height: 21.0px; font: 18.0px Arial; color: #000000; -webkit-text-stroke: #000000; min-height: 21.0px"><span class="s1"></span><br></h1>
 <p class="p5"><span class="s1"><b>RESEARCH</b></span></p>
 <p class="p5"><span class="s1">We did not use any existing research in our regressions: the rubric for the Final Report was not issued until three days prior to the project deadline, and we did not assume that the teaching staff had expected us to use resources and/or case studies outside of course materials (other people’s work) to solve the problem.</span></p>
