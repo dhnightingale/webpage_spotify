@@ -87,7 +87,7 @@ a:active {
 <p class="p1"><span class="s1"><br>
 </span></p>
 <h1 style="margin: 0.0px 0.0px 16.1px 0.0px; text-align: center; line-height: 28.0px; font: 60.0px Arial; color: #000000; -webkit-text-stroke: #000000"><b>SPOTIFY PLAYLIST DATA ANALYSIS</b></h1>
-<p class="p3"> <img src="Spotify_Pic.png" alt="Spotify Image" style="width:170px;height:170px;"></p>
+<p class="p3"> <img src="images/Spotify_Pic.png" alt="Spotify Image" style="width:170px;height:170px;"></p>
 <p class="p4"><span class="s1"></span><br></p>
 <p class="p3"><span class="s1"><b><font size="26.0">NOTEBOOKS:</font></b></span></p>
 <p class="p3"><span class="s1"><a href="https://dhnightingale.github.io/webpage_spotify/spotify_data"><b>SPOTIFY DATA</b></a></span><span class="s1"> | <b> </b><a href="https://dhnightingale.github.io/webpage_spotify/msd_data"><span class="s1"><b>MSD DATA</b></span></a> | <b> </b><a href="https://dhnightingale.github.io/webpage_spotify/data_analysis"><b>EDA, MODEL, & RESULTS</b></a> </p>
@@ -95,7 +95,7 @@ a:active {
 <p class="p5"><span class="s1"><b>MOTIVATION</b></span></p>
 <p class="p5"><span class="s1">Our goal was to come up with a model for generating playlists that will maximize the likelihood of obtaining a significant number of followers for the most common user-specified genres or search filters.</span></p>
 <p class="p8"><span class="s1"></span><br></p>
-<p class="p5"><span class="s1"><b>Our final deliverable to Spotify is a set of playlists that are most likely to be highly successful. These playlists are based around artist genre (as we did not have data on song genre).<span class="Apple-converted-space"> </span></b></span></p>
+<p class="p5"><span class="s1"><b>Our final deliverable to Spotify is an algorithm that generates a playlist based on user-suggested genre that is most likely to be highly successful. Candidate playlists are based on artist genre; we did not have data on song-specific genre.<span class="Apple-converted-space"> </span></b></span></p>
 <p class="p9"><span class="s1"></span><br></p>
 <p class="p5"><span class="s1"><b>DATA<span class="Apple-converted-space"> </span></b></span></p>
 <p class="p5"><span class="s1">Our initial data was obtained by requesting playlist information through the Spotify API, which provided information about artist and song popularities, as well as additional track characteristics, including tempo, key, and loudness. We investigated other potential predictors from the Million Songs Database developed by LabROSA at Columbia University, using the song title and album (this dataset unfortunately was missing ISRC). We did not take many features from this MSD dataset. This is partially because we did not think that too many of them would be useful (and due to time limitations). Additionally, there were not a huge percentage of songs that merged. The Spotify data seemed sufficient to make an adequate model though. This is more or less what the data looked like:</span></p>
@@ -115,10 +115,10 @@ a:active {
 <p class="p10"><span class="s1"><br>
 <p class="p5"><span class="s1">Here are some examples of our EDA:</span></p>
 <p class="p10"><span class="s1"><br>
-<p class="p3"> <img src="eda3.png" alt="EDA 3" ></p>
-<p class="p3"> <img src="eda4.png" alt="EDA 4" ></p>
-<p class="p3"> <img src="eda2.png" alt="EDA 2"></p>
-<p class="p3"> <img src="eda1.png" alt="EDA 1"></p>
+<p class="p3"> <img src="images/eda3.png" alt="EDA 3" ></p>
+<p class="p3"> <img src="images/eda4.png" alt="EDA 4" ></p>
+<p class="p3"> <img src="images/eda2.png" alt="EDA 2"></p>
+<p class="p3"> <img src="images/eda1.png" alt="EDA 1"></p>
 <p class="p10"><span class="s1"><br>
 <h1 style="margin: 0.0px 0.0px 0.0px 0.0px; line-height: 21.0px; font: 18.0px Arial; color: #000000; -webkit-text-stroke: #000000; min-height: 21.0px"><span class="s1"></span><br></h1>
 
@@ -127,12 +127,12 @@ a:active {
 <p class="p10"><span class="s1"><br>
 <p class="p5"><span class="s1">We began by creating a threshold of success for a playlist in terms of the number of followers. We set this threshold so that it would place a playlist in the top 20% most popular on Spotify (of the playlists we got from the API). With this threshold we then implemented a random forest classifier that returned a probability of the playlist hitting this threshold of followers. In other words we are generating a probability that the playlist is successful, and we use that probability to select which playlist to suggest to Spotify and/or the user.</span></p>
 <p class="p10"><span class="s1"><br>
-<p class="p3"> <img src="models.png" alt="Models"></p>
+<p class="p3"> <img src="images/models_new.png" alt="Models"></p>
 <p class="p10"><span class="s1"><br>
 
 
 <p class="p5"><span class="s1"><b>RESULTS, CONCLUSIONS, & FUTURE WORK</b></span></p>
-<p class="p5"><span class="s1">Our results for Spotify are the playlists that we recommend for each genre. Here is an example of the playlist that we generated for the genre “Indie:”</span></p>
+<p class="p5"><span class="s1">Our results for Spotify are the playlists that we recommend for each genre. Here is an example of the playlist that we generated for the genre “Pop:”</span></p>
 <p class="p10"><span class="s1"><br>
 
 <table border="1" align="center" class="dataframe">
@@ -577,6 +577,6 @@ a:active {
 </table>
 <p class="p10"><span class="s1"><br>
 
-<p class="p5"><span class="s1">We put this together by randomly selecting indie songs and putting them into playlists. We only kept the playlist with the highest probability of success. There are a couple of downsides with our current system. First, it uses artist genre and there are often many genres associated with each artist. This might not give a great representation of the desired genre. Second, this model still has a hard time classifying anything as success. After hundreds of iterations, the most likely success only had a 45% chance of success. While this is much better than most playlists will do (remember, only 20% of the original playlists are classified as success), this is still probably not as strong as we would like. We think that this model would likely become stronger with more predictors or a larger subset of playlists. For predicting followers, there are likely many complex features that include what becomes a success, including how they show up in Spotify’s search results (though causality could go in both directions). Future work would involve getting many more features and building a stronger model. However, we think our basic framework is a good way to attack the problem and believe that we could provide useful feedback to Spotify given the time to build out a stronger classifier. </span></p>
+<p class="p5"><span class="s1">We put this together by randomly selecting indie songs and putting them into playlists. We only kept the playlist with the highest probability of success. There are a couple of downsides with our current system. First, it uses artist genre and there are often many genres associated with each artist. This might not give a great representation of the desired genre. Second, this model still has a hard time classifying anything as success. After hundreds of iterations, the most likely success only had about 70% chance of success. While this is much better than most playlists will do (remember, only 20% of the original playlists are classified as success), this is still probably not as strong as we would like. We think that this model would likely become stronger with more predictors or a larger subset of playlists. For predicting followers, there are likely many complex features that include what becomes a success, including how they show up in Spotify’s search results (though causality could go in both directions). Future work would involve getting many more features and building a stronger model. However, we think our basic framework is a good way to attack the problem and believe that we could provide useful feedback to Spotify given the time to build out a stronger classifier. </span></p>
 </body>
 </html>
